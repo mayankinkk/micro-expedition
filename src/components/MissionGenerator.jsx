@@ -43,7 +43,7 @@ export default function MissionGenerator() {
   const [locStatus, setLocStatus] = useState('')
   const [streak, setStreak] = useState(0)
 
-  // strava-like tracking
+  // live tracking
   const [tracking, setTracking] = useState(false)
   const [paused, setPaused] = useState(false)
   const [track, setTrack] = useState([])
@@ -120,7 +120,7 @@ export default function MissionGenerator() {
     setElapsed(0)
     setTracking(true)
     setPaused(false)
-    setInfo('Recording — Strava-style GPS on. Go outside, we’ll map your route.')
+    setInfo('Recording — live GPS on. Go outside, we’ll map your route.')
     watchRef.current = navigator.geolocation.watchPosition(
       (pos) => {
         if (paused) return
@@ -174,7 +174,7 @@ export default function MissionGenerator() {
       let next
       if (idx >= 0) { stored[idx] = { ...stored[idx], ...updated }; next = stored } else { next = [updated, ...stored] }
       localStorage.setItem('missions', JSON.stringify(next.slice(0, 50)))
-      setInfo(`Saved activity: ${dist.toFixed(2)} km in ${formatDuration(elapsed)} — like Strava, export GPX from Log.`)
+      setInfo(`Saved activity: ${dist.toFixed(2)} km in ${formatDuration(elapsed)} — export GPX from Log.`)
     }
   }
 
@@ -207,7 +207,7 @@ export default function MissionGenerator() {
     <div style={s.page}>
       <nav style={s.nav}>
         <div style={s.navInner}>
-          <div style={s.brand}><span style={s.dot}>●</span> micro-expedition <span style={s.ver}>strava • local</span></div>
+          <div style={s.brand}><span style={s.dot}>●</span> micro-expedition <span style={s.ver}>activity • local</span></div>
           <div style={s.navLinks}>
             <button onClick={() => navigate('/log')} style={s.navBtn}>Feed <span style={s.badge}>{streak}</span></button>
             <a href="https://github.com/mayankinkk/micro-expedition" target="_blank" rel="noreferrer" style={s.navGhost}>GitHub →</a>
@@ -217,9 +217,9 @@ export default function MissionGenerator() {
 
       <div style={s.wrap}>
         <header style={s.hero}>
-          <p style={s.kicker}>Strava for tiny outdoor missions • Hacktoberfest • Touch Grass</p>
+          <p style={s.kicker}>Activity tracking for tiny missions • Hacktoberfest • Touch Grass</p>
           <h1 style={s.title}>One screen.<br /><span style={s.titleGrad}>Then go outside.</span></h1>
-          <p style={s.sub}>Pick time, vibe and place type. We check <b>sunset + weather</b>, a <b>local Gemma</b> writes one mission, then <b>Strava-style GPS</b> records your route — map, km, pace — all local, exportable as <b>GPX</b>.</p>
+          <p style={s.sub}>Pick time, vibe and place type. We check <b>sunset + weather</b>, a <b>local Gemma</b> writes one mission, then <b>live GPS</b> records your route — map, km, pace — all local, exportable as <b>GPX</b>.</p>
           <div style={s.heroStats}>
             <span style={s.stat}><b>30 sec</b> screen</span>
             <span style={s.statDot}>•</span>
@@ -272,7 +272,7 @@ export default function MissionGenerator() {
                 </div>
               </label>
               <div style={s.field}><span style={s.fLabel}>Why open?</span><p style={s.why}>Local • offline • $0 • private.<br />GPS never leaves device.</p></div>
-              <div style={s.field}><span style={s.fLabel}>Strava-like</span><p style={s.why}>Leaflet + OSM (open) • GPX export • feed + kudos • local-only.</p></div>
+              <div style={s.field}><span style={s.fLabel}>Activity map</span><p style={s.why}>Leaflet + OSM (open) • GPX export • feed + kudos • local-only.</p></div>
             </div>
           )}
           <button onClick={generate} disabled={loading} style={{ ...s.primary, opacity: loading ? 0.6 : 1 }}>{loading ? 'Generating…' : 'Generate mission →'}</button>
@@ -305,9 +305,9 @@ export default function MissionGenerator() {
             <h2 style={s.mTitle}>{mission.title}</h2>
             <p style={s.mDesc}>{mission.description}</p>
 
-            {/* Strava map + live stats */}
-            <div style={s.stravaBox}>
-              <div style={s.stravaStats}>
+            {/* Activity map + live stats */}
+            <div style={s.mapBox}>
+              <div style={s.mapStats}>
                 <div><b>{dist.toFixed(2)}</b><span>km</span></div>
                 <div><b>{formatDuration(elapsed)}</b><span>time</span></div>
                 <div><b>{pace}</b><span>pace</span></div>
@@ -316,10 +316,10 @@ export default function MissionGenerator() {
               <ActivityMap track={track.length > 0 ? track : mission.track || []} height={180} />
               <div style={s.trackActions}>
                 {!tracking ? (
-                  <button onClick={startTracking} style={s.stravaGo}>▶ Start recording</button>
+                  <button onClick={startTracking} style={s.ctaGo}>▶ Start recording</button>
                 ) : paused ? (
                   <>
-                    <button onClick={resumeTracking} style={s.stravaGo}>▶ Resume</button>
+                    <button onClick={resumeTracking} style={s.ctaGo}>▶ Resume</button>
                     <button onClick={() => stopTracking(true)} style={s.ghost}>⏹ Finish & save</button>
                   </>
                 ) : (
@@ -328,7 +328,7 @@ export default function MissionGenerator() {
                     <button onClick={() => stopTracking(true)} style={{ ...s.green, background: '#FC4C02' }}>⏹ Finish</button>
                   </>
                 )}
-                <span style={s.hint}>Strava-style • GPS local only • GPX in Log</span>
+                <span style={s.hint}>Live • GPS local only • GPX in Log</span>
               </div>
             </div>
 
@@ -348,7 +348,7 @@ export default function MissionGenerator() {
               <button onClick={() => navigate('/log')} style={s.ghost}>Feed →</button>
               <button onClick={generate} style={s.ghost}>Another one ↻</button>
             </div>
-            <p style={s.nudge}>Hit Start, go outside, then Finish — map + stats save to Feed. Screen time stays 30 sec, adventure is local + Strava-like.</p>
+            <p style={s.nudge}>Hit Start, go outside, then Finish — map + stats save to Feed. Screen time stays 30 sec, adventure is local.</p>
           </div>
         )}
 
@@ -360,7 +360,7 @@ export default function MissionGenerator() {
         </div>
 
         <footer style={s.footer}>
-          <span>Strava-inspired: Leaflet • OSM • local GPS • GPX export • kudos • open Gemma</span>
+          <span>Local activity: Leaflet • OSM • local GPS • GPX export • kudos • open Gemma</span>
           <button onClick={() => navigate('/log')} style={s.link}>feed →</button>
         </footer>
       </div>
@@ -418,10 +418,10 @@ const s = {
   progressTxt: { fontSize: 11, fontWeight: 800, opacity: 0.6 },
   mTitle: { fontSize: 22, fontWeight: 800, margin: '0 0 8px', letterSpacing: '-0.02em', color: '#111' },
   mDesc: { fontSize: 15, lineHeight: 1.5, margin: '0 0 10px', color: '#222' },
-  stravaBox: { border: '1px solid #e5e7eb', borderRadius: 12, overflow: 'hidden', marginBottom: 12, background: '#fcfcff' },
-  stravaStats: { display: 'flex', gap: 16, padding: '10px 12px', fontSize: 12, alignItems: 'end', borderBottom: '1px solid #e5e7eb', background: 'white' },
+  mapBox: { border: '1px solid #e5e7eb', borderRadius: 12, overflow: 'hidden', marginBottom: 12, background: '#fcfcff' },
+  mapStats: { display: 'flex', gap: 16, padding: '10px 12px', fontSize: 12, alignItems: 'end', borderBottom: '1px solid #e5e7eb', background: 'white' },
   trackActions: { display: 'flex', gap: 8, padding: '10px 12px', alignItems: 'center', flexWrap: 'wrap', background: 'white', borderTop: '1px solid #e5e7eb' },
-  stravaGo: { background: '#FC4C02', color: 'white', border: 'none', borderRadius: 10, padding: '9px 14px', fontWeight: 800, cursor: 'pointer' },
+  ctaGo: { background: '#FC4C02', color: 'white', border: 'none', borderRadius: 10, padding: '9px 14px', fontWeight: 800, cursor: 'pointer' },
   checks: { display: 'flex', flexDirection: 'column', gap: 8 },
   check: { display: 'flex', gap: 10, alignItems: 'center', border: '1px solid #e5e7eb', borderRadius: 12, padding: '10px 12px', cursor: 'pointer', fontSize: 14, background: 'white', transition: '0.15s' },
   checkDone: { background: '#f0fdf4', borderColor: '#bbf7d0', opacity: 0.9, textDecoration: 'line-through' },

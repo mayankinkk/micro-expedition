@@ -53,7 +53,7 @@ export default function MissionLog() {
     missions.forEach((m, i) => {
       lines.push(`## ${i + 1}. ${m.title} — ${m.estimatedTime}${m.completed ? ' ✓' : ''}`)
       if (m.place) lines.push(`*Place:* ${m.place}`)
-      if (m.distanceKm != null) lines.push(`*Strava:* ${m.distanceKm.toFixed(2)} km • ${formatDuration(m.durationSec || 0)} • ${m.pace || '--'}`)
+      if (m.distanceKm != null) lines.push(`*Activity:* ${m.distanceKm.toFixed(2)} km • ${formatDuration(m.durationSec || 0)} • ${m.pace || '--'}`)
       lines.push('', m.description, '', ...m.requirements.map((r) => `- [${m.completed ? 'x' : ' '}] ${r}`), '')
       if (m.notes) lines.push(`> ${m.notes}`, '')
       lines.push('---', '')
@@ -84,9 +84,9 @@ export default function MissionLog() {
 
   return (
     <div style={s.page}>
-      <div style={s.stravaTop}>
+      <div style={s.topBar}>
         <div style={s.navInner}>
-          <div style={s.brand}><span style={{ color: '#FC4C02' }}>◉</span> STRAVA <span style={s.brandSub}>for micro-expeditions</span></div>
+          <div style={s.brand}><span style={{ color: '#FC4C02' }}>◉</span> ACTIVITY <span style={s.brandSub}>for micro-expeditions</span></div>
           <button onClick={() => navigate('/')} style={s.topBtn}>Record →</button>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function MissionLog() {
           <button onClick={clear} style={{ ...s.ghost, borderColor: '#fecaca', color: '#b91c1c' }}>Clear</button>
         </div>
 
-        {filtered.length === 0 && <p style={s.empty}>No activities yet. Hit <b>Record →</b>, go outside, finish — it appears here like Strava.</p>}
+        {filtered.length === 0 && <p style={s.empty}>No activities yet. Hit <b>Record →</b>, go outside, finish — it appears here in your feed.</p>}
 
         <div style={s.feed}>
           {filtered.map((m) => {
@@ -146,7 +146,7 @@ export default function MissionLog() {
 
                 <p style={s.actDesc}>{m.description}</p>
 
-                <div style={s.stravaRow}>
+                <div style={s.statsRow}>
                   <div><b>{dist ? dist.toFixed(2) : '0.00'}</b><span> km</span></div>
                   <div><b>{dur ? formatDuration(dur) : m.estimatedTime}</b><span> time</span></div>
                   <div><b>{m.pace || (dist ? `${Math.floor(dur / 60 / dist)}:${String(Math.round((dur / 60 / dist % 1) * 60)).padStart(2, '0')}/km` : '--')}</b><span> pace</span></div>
@@ -160,7 +160,7 @@ export default function MissionLog() {
                 {(m.track?.length > 1 || dist > 0) ? (
                   <ActivityMap track={m.track || []} height={160} />
                 ) : (
-                  <div style={s.noTrack}>No GPS yet — hit <b>Start recording</b> next time for Strava-like map. Leaflet + OSM (open).</div>
+                  <div style={s.noTrack}>No GPS yet — hit <b>Start recording</b> next time for live map. Leaflet + OSM (open).</div>
                 )}
 
                 <ul style={s.ul}>
@@ -204,7 +204,7 @@ export default function MissionLog() {
 
 const s = {
   page: { minHeight: '100vh', background: '#f7f7fa', paddingBottom: 32 },
-  stravaTop: { position: 'sticky', top: 0, zIndex: 10, background: 'white', borderBottom: '1px solid #e5e7eb', boxShadow: '0 1px 6px rgba(0,0,0,0.06)' },
+  topBar: { position: 'sticky', top: 0, zIndex: 10, background: 'white', borderBottom: '1px solid #e5e7eb', boxShadow: '0 1px 6px rgba(0,0,0,0.06)' },
   navInner: { maxWidth: 760, margin: '0 auto', padding: '10px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
   brand: { fontWeight: 800, letterSpacing: '0.02em', fontSize: 16, color: '#242428' },
   brandSub: { fontWeight: 400, opacity: 0.5, fontSize: 12, marginLeft: 8 },
@@ -237,7 +237,7 @@ const s = {
   done: { background: '#16a34a', color: 'white', fontSize: 11, fontWeight: 800, padding: '3px 8px', borderRadius: 20 },
   kebab: { fontSize: 11, fontWeight: 800, border: '1px solid #e5e7eb', padding: '4px 8px', borderRadius: 20, cursor: 'pointer', background: '#f9f9f9' },
   actDesc: { fontSize: 13, lineHeight: 1.5, margin: '6px 0 8px', opacity: 0.85 },
-  stravaRow: { display: 'flex', gap: 18, padding: '8px 0', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6', marginBottom: 8, flexWrap: 'wrap', alignItems: 'center' },
+  statsRow: { display: 'flex', gap: 18, padding: '8px 0', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6', marginBottom: 8, flexWrap: 'wrap', alignItems: 'center' },
   metaPills: { marginLeft: 'auto', display: 'flex', gap: 6, flexWrap: 'wrap' },
   meta: { fontSize: 11, fontWeight: 700, background: '#f3f4f6', border: '1px solid #e5e7eb', padding: '2px 6px', borderRadius: 20, textTransform: 'capitalize' },
   noTrack: { background: '#f9fafb', border: '1px dashed #e5e7eb', borderRadius: 10, padding: 12, fontSize: 12, opacity: 0.6, textAlign: 'center', marginBottom: 8 },
