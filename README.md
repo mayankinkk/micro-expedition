@@ -84,11 +84,4 @@ src/
   utils/weather.js, geocode.js, ollama.js, tts.js, missionGenerator.js
 ```
 
-### 4-day plan (from overview.txt)
-
-- Day 1: Ollama + Gemma prompt good, specific missions from weather+time
-- Day 2: Minimal UI, log, avoid repeats
-- Day 3: Go do 3–4 missions, photos, note bad suggestions
-- Day 4: Write post, short demo, submit before Oct 11
-
 MIT — built for Hacktoberfest Open-Source AI Challenge Week 1.
