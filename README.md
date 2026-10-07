@@ -84,4 +84,8 @@ src/
   utils/weather.js, geocode.js, ollama.js, tts.js, missionGenerator.js
 ```
 
+### To finish Hacktoberfest
+
+You still need 30 min outside — generate 15/30/60 → do them → add photos/notes → export → post DEV → submit link at dev.to/hacktoberfest before Oct 11. That's the “bonus points” part judges check.
+
 MIT — built for Hacktoberfest Open-Source AI Challenge Week 1.
