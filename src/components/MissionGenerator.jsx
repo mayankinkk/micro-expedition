@@ -191,7 +191,7 @@ export default function MissionGenerator() {
   }
 
   const share = async () => {
-    const txt = `${mission.title} — ${mission.description} (${mission.estimatedTime} in ${mission.place}) — via micro-expedition`
+    const txt = `${mission.title} — ${mission.description} (${mission.estimatedTime} in ${mission.place}) — via offscreen`
     if (navigator.share) { try { await navigator.share({ title: mission.title, text: txt }); return } catch {} }
     await navigator.clipboard.writeText(txt)
     setInfo('Copied to clipboard — share your field photo on DEV for bonus points!')
@@ -207,7 +207,7 @@ export default function MissionGenerator() {
     <div style={s.page}>
       <nav style={s.nav}>
         <div style={s.navInner}>
-          <div style={s.brand}><span style={s.dot}>●</span> micro-expedition <span style={s.ver}>activity • local</span></div>
+          <div style={s.brand}><span style={s.dot}>●</span> offscreen <span style={s.ver}>activity • local</span></div>
           <div style={s.navLinks}>
             <button onClick={() => navigate('/log')} style={s.navBtn}>Feed <span style={s.badge}>{streak}</span></button>
             <a href="https://github.com/mayankinkk/micro-expedition" target="_blank" rel="noreferrer" style={s.navGhost}>GitHub →</a>

@@ -1,4 +1,4 @@
-# micro-expedition field log
+# offscreen field log
 
 Exported 10/8/2026, 1:29:49 PM — 3 activities (New Delhi, Delhi)
 

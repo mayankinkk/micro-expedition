@@ -45,11 +45,11 @@ export default function MissionLog() {
     const blob = new Blob([JSON.stringify(missions, null, 2)], { type: 'application/json' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = `micro-expedition-log-${new Date().toISOString().slice(0, 10)}.json`
+    a.download = `offscreen-log-${new Date().toISOString().slice(0, 10)}.json`
     a.click()
   }
   const exportMd = () => {
-    const lines = ['# micro-expedition field log', '', `Exported ${new Date().toLocaleString()} — ${missions.length} activities`, '']
+    const lines = ['# offscreen field log', '', `Exported ${new Date().toLocaleString()} — ${missions.length} activities`, '']
     missions.forEach((m, i) => {
       lines.push(`## ${i + 1}. ${m.title} — ${m.estimatedTime}${m.completed ? ' ✓' : ''}`)
       if (m.place) lines.push(`*Place:* ${m.place}`)
@@ -61,7 +61,7 @@ export default function MissionLog() {
     const blob = new Blob([lines.join('\n')], { type: 'text/markdown' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = `micro-expedition-log-${new Date().toISOString().slice(0, 10)}.md`
+    a.download = `offscreen-log-${new Date().toISOString().slice(0, 10)}.md`
     a.click()
   }
 
@@ -86,7 +86,7 @@ export default function MissionLog() {
     <div style={s.page}>
       <div style={s.topBar}>
         <div style={s.navInner}>
-          <div style={s.brand}><span style={{ color: '#FC4C02' }}>◉</span> ACTIVITY <span style={s.brandSub}>for micro-expeditions</span></div>
+          <div style={s.brand}><span style={{ color: '#FC4C02' }}>◉</span> ACTIVITY <span style={s.brandSub}>for offscreen</span></div>
           <button onClick={() => navigate('/')} style={s.topBtn}>Record →</button>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 *Hacktoberfest 2026 Week 1 — Touch Grass • open-source AI at its core*
 
-**TL;DR:** Tell `micro-expedition` how much time you have (15–60 min). It checks sunset and weather, a local Gemma model writes one tiny, specific outdoor mission — “find 5 shadows,” “sit where you see zero screens for 60 sec” — then shuts up. I used it for a week in New Delhi. Here’s what worked, what was cringe, and why running it locally actually mattered.
+**TL;DR:** Tell `offscreen` how much time you have (15–60 min). It checks sunset and weather, a local Gemma model writes one tiny, specific outdoor mission — “find 5 shadows,” “sit where you see zero screens for 60 sec” — then shuts up. I used it for a week in New Delhi. Here’s what worked, what was cringe, and why running it locally actually mattered.
 
 ---
 
@@ -59,7 +59,7 @@ Video: link to Loom/YouTube (30 sec screen, rest outside).
 ### Try it
 
 ```bash
-git clone .../micro-expedition
+git clone .../offscreen
 npm install && npm run dev
 # optional local AI:
 ollama pull gemma:2b && ollama serve

@@ -1,12 +1,12 @@
-# micro-expedition — Hacktoberfest 2026 Week 1: Touch Grass
+# offscreen — Hacktoberfest 2026 Week 1: Touch Grass
 
 **One screen, 30 seconds, then go outside.**
 
-A local-first micro-expedition agent. You tell it how much time you have (15–60 min), it checks weather + sunset and a local open model (Gemma via Ollama) generates **one small, specific outdoor mission** instead of “go for a walk” — then goes quiet. The screen is the shortest part.
+A local-first offscreen agent. You tell it how much time you have (15–60 min), it checks weather + sunset and a local open model (Gemma via Ollama) generates **one small, specific outdoor mission** instead of “go for a walk” — then goes quiet. The screen is the shortest part.
 
 > Challenge prompt: *Build something with open-source AI at its core that gets people off the screen and into the world.*
 
-- **Entry:** `micro-expedition/` — `npm run dev` at `http://localhost:5173/`
+- **Entry:** `offscreen/` — `npm run dev` at `http://localhost:5173/`
 - **Challenge hub:** https://dev.to/hacktoberfest
 - **Dates:** Oct 05–11, 2026
 
@@ -29,7 +29,7 @@ A local-first micro-expedition agent. You tell it how much time you have (15–6
 ### Quick start
 
 ```bash
-cd micro-expedition
+cd offscreen
 npm install
 # optional: local AI (works without — fallback used)
 ollama pull gemma:2b

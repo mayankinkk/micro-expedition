@@ -31,8 +31,8 @@ export function formatDuration(secs) {
   return `${m}m ${s}s`
 }
 
-export function toGpx(track, title = 'micro-expedition') {
-  const header = `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="micro-expedition" xmlns="http://www.topografix.com/GPX/1/1">\n<trk><name>${title}</name><trkseg>`
+export function toGpx(track, title = 'offscreen') {
+  const header = `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="offscreen" xmlns="http://www.topografix.com/GPX/1/1">\n<trk><name>${title}</name><trkseg>`
   const pts = track
     .map((p) => `  <trkpt lat="${p.lat}" lon="${p.lon}">${p.time ? `<time>${new Date(p.time).toISOString()}</time>` : ''}</trkpt>`)
     .join('\n')
