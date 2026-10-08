@@ -65,7 +65,9 @@ npm install && npm run dev
 ollama pull gemma:2b && ollama serve
 ```
 
-Repo: (link) — MIT. Credits: Thinking Machines / Tinker (partner), Render, Open-Meteo, Ollama team.
+Repo: https://github.com/mayankinkk/micro-expedition — MIT • Live: http://localhost:5173/ (Render config at `render.yaml`, deploy on hold) • Demo build: `npm run dev` • Credits: Thinking Machines / Tinker (partner), Render, Open-Meteo, Ollama, OSM/Leaflet.
+
+Field log exported from Feed → Export JSON/MD (3 activities, New Delhi, Delhi, with notes + track). See `field-log.json` / `field-log.md` in repo.
 
 ---
 

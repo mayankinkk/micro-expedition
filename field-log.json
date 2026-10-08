@@ -1,0 +1,144 @@
+[
+  {
+    "id": "9e8bc112-2e10-4324-8777-c7f6fa20283b",
+    "title": "15-min no-screen spot",
+    "description": "Walk any direction until you see zero screens for 60 sec. Sit there.",
+    "requirements": [
+      "Time to no-screens",
+      "Sit 3 min",
+      "Bring back one natural object"
+    ],
+    "estimatedTime": "15 min",
+    "tags": [
+      "mindful",
+      "calm",
+      "clear"
+    ],
+    "category": "mindful",
+    "vibe": "calm",
+    "difficulty": "easy",
+    "completed": true,
+    "place": "New Delhi, Delhi",
+    "coords": "28.61, 77.23",
+    "createdAt": "2026-10-08T05:59:49.054Z",
+    "notes": "Lane behind block — no shops, warm wall at 4 min. Hard not to check phone. Found fallen neem leaf, kept it. Wind check: alley vs open differed a lot.",
+    "completedAt": "2026-10-08T07:59:49.055Z",
+    "photos": [],
+    "distanceKm": 0.6,
+    "durationSec": 900,
+    "pace": "25:00/km",
+    "track": [
+      {
+        "lat": 28.61,
+        "lon": 77.2,
+        "time": 1791446389055
+      }
+    ],
+    "weather": {
+      "conditions": "clear",
+      "temperature": 25,
+      "sunrise": "06:16",
+      "sunset": "18:00"
+    },
+    "kudos": 3,
+    "liked": true
+  },
+  {
+    "id": "06ceaaf0-bf3e-4e8b-b213-63d959ccd9ee",
+    "title": "Five-color walk (30m)",
+    "description": "Clear light is best for color — find 5 distinct natural colors in 30 min.",
+    "requirements": [
+      "Find 5 colors in nature",
+      "Photo each",
+      "Sit 2 min by favorite color"
+    ],
+    "estimatedTime": "30 min",
+    "tags": [
+      "urban",
+      "playful",
+      "clear"
+    ],
+    "category": "urban",
+    "vibe": "playful",
+    "difficulty": "easy",
+    "completed": true,
+    "place": "New Delhi, Delhi",
+    "coords": "28.61, 77.23",
+    "createdAt": "2026-10-08T06:59:49.059Z",
+    "notes": "Five colors: neem green, brick red, sky blue, mustard yellow, soil brown. Drain blue was accidental but counted. Photo of wall with all 5 in frame.",
+    "completedAt": "2026-10-08T07:59:49.059Z",
+    "photos": [],
+    "distanceKm": 1.1,
+    "durationSec": 1800,
+    "pace": "27:16/km",
+    "track": [
+      {
+        "lat": 28.61,
+        "lon": 77.21,
+        "time": 1791446389059
+      }
+    ],
+    "weather": {
+      "conditions": "clear",
+      "temperature": 25,
+      "sunrise": "06:16",
+      "sunset": "18:00"
+    },
+    "kudos": 3,
+    "liked": true
+  },
+  {
+    "id": "9c69989b-51d9-4f75-8c16-b48161cb1604",
+    "title": "60-min horizon hunt",
+    "description": "Find the farthest place you can see, then the closest tiny detail. Alternate.",
+    "requirements": [
+      "Find farthest visible point",
+      "Find tiniest detail at feet",
+      "Photo both"
+    ],
+    "estimatedTime": "60 min",
+    "tags": [
+      "nature",
+      "curious",
+      "clear"
+    ],
+    "category": "nature",
+    "vibe": "curious",
+    "difficulty": "easy",
+    "completed": true,
+    "place": "New Delhi, Delhi",
+    "coords": "28.61, 77.23",
+    "createdAt": "2026-10-08T07:59:49.062Z",
+    "notes": "Horizon hunt 60m: went to Lodhi-ish park, 58 min, 2.1km tracked. Farthest point = India Gate faint, tiniest = ant on bench. Live map FC4C02 line saved, GPX exported.",
+    "completedAt": "2026-10-08T07:59:49.062Z",
+    "photos": [],
+    "track": [
+      {
+        "lat": 28.61,
+        "lon": 77.2,
+        "time": 1791442789062
+      },
+      {
+        "lat": 28.615,
+        "lon": 77.21,
+        "time": 1791444589062
+      },
+      {
+        "lat": 28.613,
+        "lon": 77.23,
+        "time": 1791446389062
+      }
+    ],
+    "distanceKm": 2.14,
+    "durationSec": 3480,
+    "pace": "27:05/km",
+    "weather": {
+      "conditions": "clear",
+      "temperature": 25,
+      "sunrise": "06:16",
+      "sunset": "18:00"
+    },
+    "kudos": 7,
+    "liked": true
+  }
+]
