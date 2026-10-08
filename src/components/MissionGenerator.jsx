@@ -210,7 +210,7 @@ export default function MissionGenerator() {
           <div style={s.brand}><span style={s.dot}>●</span> offscreen <span style={s.ver}>activity • local</span></div>
           <div style={s.navLinks}>
             <button onClick={() => navigate('/log')} style={s.navBtn}>Feed <span style={s.badge}>{streak}</span></button>
-            <a href="https://github.com/mayankinkk/micro-expedition" target="_blank" rel="noreferrer" style={s.navGhost}>GitHub →</a>
+            <a href="https://github.com/mayankinkk/offscreen" target="_blank" rel="noreferrer" style={s.navGhost}>GitHub →</a>
           </div>
         </div>
       </nav>

@@ -2,7 +2,7 @@
 
 Exported 10/8/2026, 1:29:49 PM — 3 activities (New Delhi, Delhi)
 
-Repo: https://github.com/mayankinkk/micro-expedition
+Repo: https://github.com/mayankinkk/offscreen
 Live: http://localhost:5173/ (Render on hold)
 
 ## 1. 15-min no-screen spot — 15 min ✓
