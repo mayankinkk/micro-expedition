@@ -19,7 +19,7 @@ Walk any direction until you see zero screens for 60 sec. Sit there.
 
 > Notes: Lane behind block — no shops, warm wall at 4 min. Hard not to check phone. Found fallen neem leaf, kept it. Wind check: alley vs open differed a lot.
 
-*Kudos:* 3 • *Photos:* 0 attached
+*Kudos:* 3 • *Photos:* 1 attached (placeholder)
 
 ---
 
@@ -37,7 +37,7 @@ Clear light is best for color — find 5 distinct natural colors in 30 min.
 
 > Notes: Five colors: neem green, brick red, sky blue, mustard yellow, soil brown. Drain blue was accidental but counted. Photo of wall with all 5 in frame.
 
-*Kudos:* 3 • *Photos:* 0 attached
+*Kudos:* 3 • *Photos:* 1 attached (placeholder)
 
 ---
 
@@ -55,6 +55,6 @@ Find the farthest place you can see, then the closest tiny detail. Alternate.
 
 > Notes: Horizon hunt 60m: went to Lodhi-ish park, 58 min, 2.1km tracked. Farthest point = India Gate faint, tiniest = ant on bench. Live map FC4C02 line saved, GPX exported.
 
-*Kudos:* 7 • *Photos:* 0 attached
+*Kudos:* 7 • *Photos:* 1 attached (placeholder)
 
 ---

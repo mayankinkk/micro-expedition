@@ -23,7 +23,9 @@
     "createdAt": "2026-10-08T05:59:49.054Z",
     "notes": "Lane behind block — no shops, warm wall at 4 min. Hard not to check phone. Found fallen neem leaf, kept it. Wind check: alley vs open differed a lot.",
     "completedAt": "2026-10-08T07:59:49.055Z",
-    "photos": [],
+    "photos": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+    ],
     "distanceKm": 0.6,
     "durationSec": 900,
     "pace": "25:00/km",
@@ -67,7 +69,9 @@
     "createdAt": "2026-10-08T06:59:49.059Z",
     "notes": "Five colors: neem green, brick red, sky blue, mustard yellow, soil brown. Drain blue was accidental but counted. Photo of wall with all 5 in frame.",
     "completedAt": "2026-10-08T07:59:49.059Z",
-    "photos": [],
+    "photos": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+    ],
     "distanceKm": 1.1,
     "durationSec": 1800,
     "pace": "27:16/km",
@@ -111,7 +115,9 @@
     "createdAt": "2026-10-08T07:59:49.062Z",
     "notes": "Horizon hunt 60m: went to Lodhi-ish park, 58 min, 2.1km tracked. Farthest point = India Gate faint, tiniest = ant on bench. Live map FC4C02 line saved, GPX exported.",
     "completedAt": "2026-10-08T07:59:49.062Z",
-    "photos": [],
+    "photos": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+    ],
     "track": [
       {
         "lat": 28.61,
