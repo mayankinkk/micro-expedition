@@ -209,7 +209,7 @@ export default function MissionGenerator() {
         <div style={s.navInner}>
           <div style={s.brand}><span style={s.dot}>●</span> offscreen <span style={s.ver}>activity • local</span></div>
           <div style={s.navLinks}>
-            <button onClick={() => navigate('/log')} style={s.navBtn}>Feed <span style={s.badge}>{streak}</span></button>
+            <button onClick={() => navigate('/log')} style={s.navBtn}>Feed <span style={s.streakBadge}>{streak}</span></button>
             <a href="https://github.com/mayankinkk/offscreen" target="_blank" rel="noreferrer" style={s.navGhost}>GitHub →</a>
           </div>
         </div>
@@ -377,7 +377,7 @@ const s = {
   ver: { fontWeight: 600, opacity: 0.5, fontSize: 11, border: '1px solid #e5e7eb', padding: '2px 6px', borderRadius: 20 },
   navLinks: { display: 'flex', gap: 8, alignItems: 'center' },
   navBtn: { border: '1px solid #111', background: '#111', color: 'white', borderRadius: 20, padding: '6px 12px', fontWeight: 700, fontSize: 13, cursor: 'pointer' },
-  badge: { background: '#FC4C02', color: 'white', fontSize: 10, padding: '1px 6px', borderRadius: 20, marginLeft: 6, fontWeight: 800 },
+  streakBadge: { background: '#FC4C02', color: 'white', fontSize: 10, padding: '1px 6px', borderRadius: 20, marginLeft: 6, fontWeight: 800 },
   navGhost: { fontSize: 13, fontWeight: 600, color: '#111', textDecoration: 'none', border: '1px solid #e5e7eb', padding: '6px 10px', borderRadius: 20, background: 'white' },
   wrap: { maxWidth: 760, margin: '0 auto', padding: '0 16px' },
   hero: { padding: '28px 0 16px' },
